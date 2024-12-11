@@ -1,0 +1,3 @@
+MAIN PAGE ==> .venv\Lib\site-packages\PySide6\uic.exe -g python .\gui\uis\pages\main_pages.ui > .\gui\uis\pages\ui_main_pages.py
+
+COLUMNS ==> .venv\Lib\site-packages\PySide6\uic.exe -g python .\gui\uis\columns\left_column.ui > .\gui\uis\columns\ui_left_column.py
