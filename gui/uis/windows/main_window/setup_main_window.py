@@ -1,53 +1,30 @@
-# ///////////////////////////////////////////////////////////////
-#
-# BY: WANDERSON M.PIMENTA
-# PROJECT MADE WITH: Qt Designer and PySide6
-# V: 1.0.0
-#
-# This project can be used freely for all uses, as long as they maintain the
-# respective credits only in the Python scripts, any information in the visual
-# interface (GUI) can be modified without any implication.
-#
-# There are limitations on Qt licenses if you want to use your products
-# commercially, I recommend reading them on the official website:
-# https://doc.qt.io/qtforpython/licenses.html
-#
-# ///////////////////////////////////////////////////////////////
-
 # IMPORT PACKAGES AND MODULES
-# ///////////////////////////////////////////////////////////////
+from gui.core.functions import Functions
 from gui.widgets.py_table_widget.py_table_widget import PyTableWidget
 from . functions_main_window import *
 import sys
 import os
 
 # IMPORT QT CORE
-# ///////////////////////////////////////////////////////////////
 from qt_core import *
 
 # IMPORT SETTINGS
-# ///////////////////////////////////////////////////////////////
 from gui.core.json_settings import Settings
 
 # IMPORT THEME COLORS
-# ///////////////////////////////////////////////////////////////
 from gui.core.json_themes import Themes
 
 # IMPORT PY ONE DARK WIDGETS
-# ///////////////////////////////////////////////////////////////
 from gui.widgets import *
 
 # LOAD UI MAIN
-# ///////////////////////////////////////////////////////////////
 from .functions_main_window import MainFunctions
 from . ui_main import *
 
 # MAIN FUNCTIONS 
-# ///////////////////////////////////////////////////////////////
 from . functions_main_window import *
 
 # PY WINDOW
-# ///////////////////////////////////////////////////////////////
 class SetupMainWindow:
     def __init__(self):
         super().__init__()
@@ -69,7 +46,7 @@ class SetupMainWindow:
             "is_active" : True
         },
         {
-            "btn_icon" : "watch [#759].svg",
+            "btn_icon" : "person-vcard.svg",
             "btn_id" : "btn_crm",
             "btn_text" : "CRM",
             "btn_tooltip" : "Gestión de clientes",
@@ -77,80 +54,80 @@ class SetupMainWindow:
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_2",
+            "btn_icon" : "cart.svg",
+            "btn_id" : "btn_ventas",
             "btn_text" : "Ventas",
             "btn_tooltip" : "Pedidos, facturas, ventas...",
             "show_top" : True,
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_3",
+            "btn_icon" : "minecart.svg",
+            "btn_id" : "btn_fabricacion",
             "btn_text" : "Fabricación",
             "btn_tooltip" : "Ordenes de producción, materiales...",
             "show_top" : True,
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_3",
+            "btn_icon" : "box-seam.svg",
+            "btn_id" : "btn_inventario",
             "btn_text" : "Inventario",
             "btn_tooltip" : "Productos, alertas, stock...",
             "show_top" : True,
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_3",
+            "btn_icon" : "people.svg",
+            "btn_id" : "btn_empleados",
             "btn_text" : "Empleados",
             "btn_tooltip" : "Datos personales, roles...",
             "show_top" : True,
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_3",
+            "btn_icon" : "bar-chart-line.svg",
+            "btn_id" : "btn_contabilidad",
             "btn_text" : "Contabilidad",
             "btn_tooltip" : "Ingresos, gastos, reportes...",
             "show_top" : True,
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_3",
+            "btn_icon" : "wrench.svg",
+            "btn_id" : "btn_manteniminento",
             "btn_text" : "Mantenimiento",
             "btn_tooltip" : "Incidencias, instalaciones...",
             "show_top" : True,
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_3",
+            "btn_icon" : "calendar3.svg",
+            "btn_id" : "btn_proyectos",
             "btn_text" : "Proyectos",
             "btn_tooltip" : "Proyectos, tareas...",
             "show_top" : True,
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_3",
+            "btn_icon" : "shop.svg",
+            "btn_id" : "btn_compras",
             "btn_text" : "Compras",
             "btn_tooltip" : "Proveedores, ordenes de compra...",
             "show_top" : True,
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_3",
+            "btn_icon" : "router.svg",
+            "btn_id" : "btn_web",
             "btn_text" : "WEB",
             "btn_tooltip" : "Página web pública",
             "show_top" : True,
             "is_active" : False
         },
         {
-            "btn_icon" : "icon_file.svg",
-            "btn_id" : "btn_page_3",
+            "btn_icon" : "tpv.svg",
+            "btn_id" : "btn_tpv",
             "btn_text" : "TPV",
             "btn_tooltip" : "Terminal punto de venta",
             "show_top" : True,
@@ -320,6 +297,7 @@ class SetupMainWindow:
         # ADD TO LAYOUT
         self.ui.left_column.menus.btn_2_layout.addWidget(self.toggle_1, Qt.AlignmentFlag.AlignCenter, Qt.AlignmentFlag.AlignCenter)
         
+        # HOME
         # ADD DEFAULT WIDGET
         self.line_edit = QLineEdit()
         self.button = QPushButton("Enviar") 

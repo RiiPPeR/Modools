@@ -8,15 +8,8 @@
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QSizePolicy, QStackedWidget,
-    QVBoxLayout, QWidget)
+from qt_core import *
+
 
 class Ui_MainPages(object):
     def setupUi(self, MainPages):
@@ -59,13 +52,34 @@ class Ui_MainPages(object):
         self.page_3_layout.addWidget(self.empty_page_label)
 
         self.pages.addWidget(self.page_3)
+        self.page_4 = QWidget()
+        self.page_4.setObjectName(u"page_4")
+        self.pages.addWidget(self.page_4)
+        self.page_5 = QWidget()
+        self.page_5.setObjectName(u"page_5")
+        self.pages.addWidget(self.page_5)
+        self.page_6 = QWidget()
+        self.page_6.setObjectName(u"page_6")
+        self.pages.addWidget(self.page_6)
+        self.page_7 = QWidget()
+        self.page_7.setObjectName(u"page_7")
+        self.pages.addWidget(self.page_7)
+        self.page_8 = QWidget()
+        self.page_8.setObjectName(u"page_8")
+        self.pages.addWidget(self.page_8)
+        self.page_9 = QWidget()
+        self.page_9.setObjectName(u"page_9")
+        self.pages.addWidget(self.page_9)
+        self.page_10 = QWidget()
+        self.page_10.setObjectName(u"page_10")
+        self.pages.addWidget(self.page_10)
 
         self.main_pages_layout.addWidget(self.pages)
 
 
         self.retranslateUi(MainPages)
 
-        self.pages.setCurrentIndex(0)
+        self.pages.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainPages)

@@ -1,19 +1,3 @@
-# ///////////////////////////////////////////////////////////////
-#
-# BY: WANDERSON M.PIMENTA
-# PROJECT MADE WITH: Qt Designer and PySide6
-# V: 1.0.0
-#
-# This project can be used freely for all uses, as long as they maintain the
-# respective credits only in the Python scripts, any information in the visual
-# interface (GUI) can be modified without any implication.
-#
-# There are limitations on Qt licenses if you want to use your products
-# commercially, I recommend reading them on the official website:
-# https://doc.qt.io/qtforpython/licenses.html
-#
-# ///////////////////////////////////////////////////////////////
-
 # IMPORT PACKAGES AND MODULES
 # ///////////////////////////////////////////////////////////////
 from gui.core.functions import Functions
@@ -196,7 +180,7 @@ class UI_MainWindow(object):
             parent,
             logo_width = 100,
             app_parent = self.central_widget,
-            logo_image = "logo_top_100x22.svg",
+            logo_image = "modools.png",
             bg_color = self.themes["app_color"]["bg_two"],
             div_color = self.themes["app_color"]["bg_three"],
             btn_bg_color = self.themes["app_color"]["bg_two"],
